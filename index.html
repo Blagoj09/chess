@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Modernes Schach | Chess</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">♟</div>
+          <div>
+            <h1>Modernes Schach</h1>
+            <p class="subtitle">Klar. Schnell. Regelbewusst.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="turn">Am Zug: <span id="turnLabel">Weiß</span></div>
+          <button
+            id="undoBtn"
+            class="btn ghost"
+            title="Letzten Zug rückgängig machen"
+          >
+            Rückgängig
+          </button>
+          <button id="restartBtn" class="btn">Neustart</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="board-panel">
+          <div id="board" class="board" aria-label="Schachbrett"></div>
+        </section>
+
+        <aside class="info-panel">
+          <div class="panel card">
+            <h3>Geschlagene Figuren</h3>
+            <div class="captured">
+              <div>
+                <strong>Weiß</strong>
+                <div id="capturedWhite" class="caps"></div>
+              </div>
+              <div>
+                <strong>Schwarz</strong>
+                <div id="capturedBlack" class="caps"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel card moves">
+            <h3>Zugliste</h3>
+            <ol id="moveList" class="move-list"></ol>
+          </div>
+
+          <div class="panel card small">
+            <h3>Hinweise</h3>
+            <ul>
+              <li>Klicke eine Figur an, um die legalen Züge anzuzeigen.</li>
+              <li>
+                Bauernumwandlung: Bauer wird automatisch zur Dame befördert.
+              </li>
+              <li>Rochade und en-passant können auf Wunsch ergänzt werden.</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <small>Blagoj Ramadanov</small>
+      </footer>
+    </div>
+
+    <script defer src="app.js"></script>
+  </body>
+</html>
